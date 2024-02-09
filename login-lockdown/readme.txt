@@ -3,7 +3,7 @@ Contributors: WebFactory
 Tags: security, login, login form, protect login, captcha, login control, login blocking, lockdown, ban ip, bruteforce
 Requires at least: 4.0
 Tested up to: 6.4
-Stable Tag: 2.08
+Stable Tag: 2.09
 Requires PHP: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,11 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 3. Country blocking (PRO feature) allows you to block selected countries from accessing the site
 
 == Change Log ==
+
+= v2.09 =
+* 2024/02/09
+* security fix
+
 = v2.08 =
 * 2023/12/09
 * security/fatal error fix

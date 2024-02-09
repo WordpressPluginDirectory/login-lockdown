@@ -329,7 +329,7 @@ class LoginLockdown_Admin extends LoginLockdown
                 <li>Email support from plugin developers</li>
             </ul>
 
-            <p class="text-center"><a href="#" class="open-pro-dialog button button-buy" data-pro-feature="sidebar-box">Get PRO Now</a></p>
+            <p class="text-center"><a href="#" class="open-pro-dialog button button-buy" data-pro-feature="sidebar-box-btn">Get a LIFETIME license Now</a></p>
             </div>';
 
     if (!defined('EPS_REDIRECT_VERSION') && !defined('WF301_PLUGIN_FILE')) {
@@ -366,13 +366,13 @@ class LoginLockdown_Admin extends LoginLockdown
         </tr>
 
         <tr class="prices">
-        <td class="center"><del>$89 /year</del><br><span>$89</span> <b>/lifetime</b></td>
+        <td class="center"><del>$89 /year</del><br><span>$79</span> <b>/lifetime</b></td>
         <td class="center"><del>$119 /year</del><br><span>$99</span> <b>/lifetime</b></td>
         <td class="center"><del>$299 /year</del><br><span>$179</span> <b>/lifetime</b></td>
         </tr>
 
         <tr>
-        <td><span class="dashicons dashicons-yes"></span><b>1 Site License</b>  ($89 per site)</td>
+        <td><span class="dashicons dashicons-yes"></span><b>1 Site License</b>  ($79 per site)</td>
         <td><span class="dashicons dashicons-yes"></span><b>5 Sites License</b>  ($19 per site)</td>
         <td><span class="dashicons dashicons-yes"></span><b>100 Sites License</b>  ($1.8 per site)</td>
         </tr>
@@ -438,8 +438,8 @@ class LoginLockdown_Admin extends LoginLockdown
         </tr>
 
         <tr>
-        <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-launch&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-launch&ref=pricing-table" target="_blank">Lifetime License<br>$89 -&gt; BUY NOW</a>
-        <br>or <a class="button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" target="_blank">only $7.99 <small>/month</small></a></td>
+        <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-launch-new&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-launch-new&ref=pricing-table" target="_blank">Lifetime License<br>$79 -&gt; BUY NOW</a>
+        <br>or <a class="button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" target="_blank">only $6.99 <small>/month</small></a></td>
         <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=team-launch&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=team-launch&ref=pricing-table" target="_blank">Lifetime License<br>$99 -&gt; BUY NOW</a></td>
         <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=agency-launch&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=agency-launch&ref=pricing-table" target="_blank">Lifetime License<br>$179 -&gt; BUY NOW</a></td>
         </tr>

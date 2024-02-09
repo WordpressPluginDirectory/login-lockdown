@@ -489,6 +489,10 @@ class LoginLockdown_Functions extends LoginLockdown
 
   static function generate_export_file()
   {
+    if (false === current_user_can('manage_options')) {
+      wp_die('Sorry, you have to be an admin to run this action.');
+    }
+    
     $filename = str_replace(array('http://', 'https://'), '', home_url());
     $filename = str_replace(array('/', '\\', '.'), '-', $filename);
     $filename .= '-' . date('Y-m-d') . '-loginlockdown.txt';
@@ -517,7 +521,7 @@ class LoginLockdown_Functions extends LoginLockdown
   {
     check_ajax_referer('install_wp301');
 
-    if (false === current_user_can('administrator')) {
+    if (false === current_user_can('manage_options')) {
       wp_die('Sorry, you have to be an admin to run this action.');
     }
 

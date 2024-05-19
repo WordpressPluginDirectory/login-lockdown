@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2023, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
  */
 
 class LoginLockdown_AJAX extends LoginLockdown
@@ -94,9 +94,9 @@ class LoginLockdown_AJAX extends LoginLockdown
       });
 
       if (wp_mail($current_user->user_email, $subject, $message)) {
-        wp_send_json_success(array('sent' => true, 'title' => 'Email sent successfully', 'text' => 'An email has been sent to <strong>' . $current_user->user_email . '</strong>. Please check your Inbox as well as your Spam folder. If you have not received the email, there is an issue with your email configuration on your website.'));
+        wp_send_json_success(array('sent' => true, 'title' => 'Email sent successfully', 'text' => 'An email has been sent to <strong>' . $current_user->user_email . '</strong>. Please check your inbox and spam folder. If you don\'t received the email, there is an issue with the email configuration on this site.'));
       } else {
-        wp_send_json_success(array('sent' => false, 'title' => 'Email failed', 'text' => 'We tried to send an email to <strong>' . $current_user->user_email . '</strong> but it appears to have failed. Please check your Inbox as well as your Spam folder. If you have not received the email, there is an issue with your email configuration on your website.'));
+        wp_send_json_success(array('sent' => false, 'title' => 'Email failed', 'text' => 'We tried to send an email to <strong>' . $current_user->user_email . '</strong> but it appears to have failed. Please check your inbox and spam folder. If you don\'t received the email, there is an issue with the email configuration on this site.'));
       }
     } else {
       wp_send_json_error(__('Unknown tool.', 'login-lockdown'));

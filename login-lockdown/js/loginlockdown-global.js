@@ -1,7 +1,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2023, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
  */
 
 // global object for all Login Lockdown functions

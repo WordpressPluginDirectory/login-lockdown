@@ -1,31 +1,31 @@
 === Login Lockdown - Protect Login Form ===
 Contributors: WebFactory
-Tags: security, login, login form, protect login, captcha, login control, login blocking, lockdown, ban ip, bruteforce
+Tags: login, block login, protect login, captcha, lockdown
 Requires at least: 4.0
-Tested up to: 6.4
-Stable Tag: 2.09
+Tested up to: 6.5
+Stable Tag: 2.10
 Requires PHP: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Protect login form by limiting the number of login attempts from the same IP & banning IPs.
+Protect, lockdown & secure login form by limiting login attempts from the same IP & banning IPs.
 
 == Description ==
 
-<a href="https://wploginlockdown.com/">Login Lockdown</a> records the IP address and timestamp of failed login attempts. If more than a selected number of attempts are detected within a set period of time from the same IP, then the **login is disabled for all requests from that IP address** (or the IP is completely blocked from accessing the site). This helps prevent brute force password attacks & discovery.
+<a href="https://wploginlockdown.com/">Login Lockdown</a> records the IP address and timestamp of failed login attempts. If more than a selected number of attempts are detected within a set period of time from the same IP, then the **login is disabled for all requests from that IP address** (or the IP is completely blocked from accessing the site). This secures the site and helps prevent brute force password attacks & discovery.
 
-The plugin defaults to a 1 hour lock out of an IP block after 3 failed login attempts within 5 minutes. This can be modified in options. Administrators can release locked out IP ranges manually from the panel. A detailed log is available for all failed login attempts and all IP locks.
+The plugin defaults to a 1 hour lock out of an IP block after 3 failed login attempts within 5 minutes. This can be modified in options. Administrators can release locked out IPs manually from the panel. A detailed log is available for all failed login attempts and all IP locks to control lockdown.
 
 Configure the plugin from Settings - Login Lockdown.
 
 #### Country blocking (PRO feature)
-Block unwanted countries from accessing the site, or just block them from being able to log in. Display a custom message to blocked visitors so they know why they can't access the site.
+Block unwanted countries from accessing the site, or block them from being able to log in. Display a custom message to blocked visitors so they know why they can't access the site.
 
 #### Captcha
-The simplest way to get rid of bots and brute-force password attacks. Choose from 4 different versions - built-in one, two from Google (PRO feature), and hCaptcha (PRO feature). Built-in captcha is GDPR compatible.
+The simplest way to get rid of bots and brute-force password attacks. Choose from 5 different versions - built-in one, two from Google (PRO feature), Cloudflare Turnstile, and hCaptcha (PRO feature). Built-in captcha is GDPR compatible.
 
 #### 2FA - Two Factor Authentication (PRO feature)
-Provide an extra layer of security without messing with annoying 2FA code generating apps such as Google Authenticator. Even if somebody knows your username &amp; password they won't be able to log in because it needs to be confirmed by clicking a unique link sent to your email. And since you're the only one that has access to your inbox, you'll never get hacked.
+Provide an extra layer of security without 2FA code generating apps such as Google Authenticator. Even if somebody knows your username &amp; password they won't be able to log in because it needs to be confirmed by clicking a unique link sent to your email. Since you're the only one that has access to your inbox, you'll never get hacked.
 
 #### Cloud Protection (PRO feature)
 Manage IP Whitelists and Blacklists in your Login Lockdown Dashboard (a SaaS service for managing all your sites) and apply them to protect all the sites you manage from a single location.
@@ -47,7 +47,7 @@ Just use standard Plugin overview page in WordPress admin section and deactivate
 
 = Will it slow my site down? =
 
-No, it won't. The majority of the code is only run when logging in. 
+No, it won't. The majority of the code is only run when logging in.
 
 = How can I report security bugs? =
 
@@ -61,6 +61,10 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 3. Country blocking (PRO feature) allows you to block selected countries from accessing the site
 
 == Change Log ==
+
+= v2.10 =
+* 2024/05/18
+* made more strings translatable
 
 = v2.09 =
 * 2024/02/09
@@ -106,61 +110,6 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 * prefixed function names that are in global namespace
 * properly escaped all inputs
 
-= Old changelog =
- ver. 1.8.1 30-Sep-2019
-
- - adding missing ./languages folder
-
- ver. 1.8 30-Sep-2019
-
- - fixed issues with internationalization, added .pot file
- - changed the credit link to default to not showing
-
- ver. 1.7.1 13-Sep-2016
-
- - fixed bug causing all ipv6 addresses to get locked out if 1 was
- - added in WordPress MultiSite functionality
- - fixed bug where subnets could be overly matched, causing more IPs to be blocked than intended
- - moved the report for locked out IP addresses to its own tab
-
- ver. 1.6.1 8-Mar-2014
-
- - fixed html glitch preventing options from being saved
-
- ver. 1.6 7-Mar-2014
-
- - cleaned up deprecated functions
- - fixed bug with invalid property on a non-object when locking out invalid usernames
- - fixed utilization of $wpdb->prepare
- - added more descriptive help text to each of the options
- - added the ability to remove the "Login form protected by Login Lockdown." message from within the dashboard
-
- ver. 1.5 17-Sep-2009
-
- - implemented wp_nonce security in the options and lockdown release forms in the admin screen
- - fixed a security hole with an improperly escaped SQL query
- - encoded certain outputs in the admin panel using esc_attr() to prevent XSS attacks
- - fixed an issue with the 'Lockout Invalid Usernames' option not functioning as intended
-
- ver. 1.4 29-Aug-2009
-
- - removed erroneous error affecting WP 2.8+
- - fixed activation error caused by customizing the location of the wp-content folder
- - added in the option to mask which specific login error (invalid username or invalid password) was generated
- - added in the option to lock out failed login attempts even if the username doesn't exist
-
- ver. 1.3 23-Feb-2009
- - adjusted positioning of plugin byline
- - allowed for dynamic location of plugin files
-
- ver. 1.2 15-Jun-2008
-
- - now compatible with WordPress 2.5 and up only
-
- ver. 1.1 01-Sep-2007
-
- - revised time query to MySQL 4.0 compatibility
-
- ver. 1.0 29-Aug-2007
-
- - released
+= v1.0 =
+* 2007/08/29
+* initial release

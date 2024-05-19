@@ -1,7 +1,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2023, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
  */
 
  @import url("https://fonts.bunny.net/css?family=roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
@@ -2245,7 +2245,7 @@
  }
 
  .captcha-box-wrapper {
-   width: calc(20% - 22px);
+   width: calc(24% - 14px);
    margin-right: 20px;
    float: left;
    display: block;

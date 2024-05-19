@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2023, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
  */
 
 class LoginLockdown_Functions extends LoginLockdown
@@ -216,7 +216,7 @@ class LoginLockdown_Functions extends LoginLockdown
     $options = LoginLockdown_Setup::get_options();
 
     if ($options['mask_login_errors'] == 1) {
-      $error = 'Login Failed';
+      $error = __('Login Failed', 'login-lockdown');
     }
     return $error;
   }
@@ -227,7 +227,7 @@ class LoginLockdown_Functions extends LoginLockdown
     $showcreditlink = $options['show_credit_link'];
 
     if ($options['captcha'] == 'builtin') {
-      echo '<p><label for="loginlockdown_captcha">Are you human? Please solve: ';
+      echo '<p><label for="loginlockdown_captcha">' . __('Are you human? Please solve: ', 'login-lockdown');
       echo '<img class="loginlockdown-captcha-img" style="vertical-align: text-top;" src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL) . '/libs/captcha.php?loginlockdown-generate-image=true&noise=1&rnd=' . esc_attr(rand(0, 10000)) . '" alt="Captcha" />';
       echo '<input class="input" type="text" size="3" name="loginlockdown_captcha" id="loginlockdown_captcha" />';
       echo '</label></p><br />';
@@ -492,7 +492,7 @@ class LoginLockdown_Functions extends LoginLockdown
     if (false === current_user_can('manage_options')) {
       wp_die('Sorry, you have to be an admin to run this action.');
     }
-    
+
     $filename = str_replace(array('http://', 'https://'), '', home_url());
     $filename = str_replace(array('/', '\\', '.'), '-', $filename);
     $filename .= '-' . date('Y-m-d') . '-loginlockdown.txt';

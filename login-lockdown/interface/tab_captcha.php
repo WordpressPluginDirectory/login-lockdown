@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2023, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
  */
 
 class LoginLockdown_Tab_Captcha extends LoginLockdown
@@ -22,6 +22,7 @@ class LoginLockdown_Tab_Captcha extends LoginLockdown
     $captcha[] = array('val' => 'recaptchav2', 'label' => 'reCAPTCHA v2 - PRO option', 'class' => 'pro-option');
     $captcha[] = array('val' => 'recaptchav3', 'label' => 'reCAPTCHA v3 - PRO option', 'class' => 'pro-option');
     $captcha[] = array('val' => 'hcaptcha', 'label' => 'hCaptcha - PRO option', 'class' => 'pro-option');
+    $captcha[] = array('val' => 'cloudflare', 'label' => 'Cloudflare Turnstile - PRO option', 'class' => 'pro-option');
 
     echo '<tr valign="top">
         <th scope="row"><label for="captcha">Captcha</label></th>
@@ -100,6 +101,20 @@ class LoginLockdown_Tab_Captcha extends LoginLockdown
     echo '<li>High Security</li>';
     echo '<li>Requires <a href="https://www.hcaptcha.com/signup-interstitial" target="_blank">API Keys</a></li>';
     echo '<li>GDPR Compatible</li>';
+    echo '<li>Best Choice</li>';
+    echo '</ul>';
+    echo '</div>';
+    echo '</div>';
+
+    echo '<div class="captcha-box-wrapper ' . ($options['captcha'] == 'hcaptcha' ? 'captcha-selected' : '') . '" data-captcha="cloudflare">';
+    echo '<a title="This feature is available in the PRO version. Click for details." href="#" data-feature="cloudflare" class="open-upsell pro-label">PRO</a>';
+    echo '<img src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL) . '/images/captcha_cloudflare.png" />';
+    echo '<div class="captcha-box-desc">';
+    echo '<h3>Cloudflare Turnstile</h3>';
+    echo '<ul>';
+    echo '<li>High Security</li>';
+    echo '<li>Requires <a href="https://dash.cloudflare.com/sign-up?to=/:account/turnstile" target="_blank">API Keys</a></li>';
+    echo '<li>Not explicitly GDPR Compatible</li>';
     echo '<li>Best Choice</li>';
     echo '</ul>';
     echo '</div>';

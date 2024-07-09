@@ -35,7 +35,7 @@ class LoginLockdown_Tab_Captcha extends LoginLockdown
     echo '<tr class="captcha_verify_wrapper" style="display:none;" valign="top">
         <th scope="row"></th>
         <td><button id="verify-captcha" class="button button-primary button-large button-yellow">Verify Captcha <i class="loginlockdown-icon loginlockdown-make-group"></i></button>';
-    echo '<input type="hidden" class="regular-text" id="captcha_verified" name="' . LOGINLOCKDOWN_OPTIONS_KEY . '[captcha_verified]" value="0">';
+    echo '<input type="hidden" class="regular-text" id="captcha_verified" name="' . esc_attr(LOGINLOCKDOWN_OPTIONS_KEY) . '[captcha_verified]" value="0">';
     echo '<br /><span style="display: inline-block; padding-top: 6px;">Click the Verify Captcha button to verify that the captcha works properly. Otherwise captcha settings will not be saved.</span>';
     echo '</td></tr>';
 

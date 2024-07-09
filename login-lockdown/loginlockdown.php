@@ -3,13 +3,13 @@
   Plugin Name: Login Lockdown
   Plugin URI: https://wploginlockdown.com/
   Description: Protect the login form by banning IPs after multiple failed login attempts.
-  Version: 2.10
+  Version: 2.11
   Author: WebFactory Ltd
   Author URI: https://www.webfactoryltd.com/
   License: GNU General Public License v3.0
   Text Domain: login-lockdown
   Requires at least: 4.0
-  Tested up to: 6.5
+  Tested up to: 6.6
   Requires PHP: 5.2
 
   Copyright 2022 - 2024  WebFactory Ltd  (email: support@webfactoryltd.com)
@@ -32,7 +32,7 @@
 
 // include only file
 if (!defined('ABSPATH')) {
-  wp_die(__('Do not open this file directly.', 'login-lockdown'));
+  wp_die(esc_html__('Do not open this file directly.', 'login-lockdown'));
 }
 
 define('LOGINLOCKDOWN_PLUGIN_FILE', __FILE__);

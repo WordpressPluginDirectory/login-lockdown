@@ -227,7 +227,7 @@ class LoginLockdown_Functions extends LoginLockdown
     $showcreditlink = $options['show_credit_link'];
 
     if ($options['captcha'] == 'builtin') {
-      echo '<p><label for="loginlockdown_captcha">' . __('Are you human? Please solve: ', 'login-lockdown');
+      echo '<p><label for="loginlockdown_captcha">' . esc_html__('Are you human? Please solve: ', 'login-lockdown');
       echo '<img class="loginlockdown-captcha-img" style="vertical-align: text-top;" src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL) . '/libs/captcha.php?loginlockdown-generate-image=true&noise=1&rnd=' . esc_attr(rand(0, 10000)) . '" alt="Captcha" />';
       echo '<input class="input" type="text" size="3" name="loginlockdown_captcha" id="loginlockdown_captcha" />';
       echo '</label></p><br />';
@@ -543,7 +543,7 @@ class LoginLockdown_Functions extends LoginLockdown
 		</style>';
 
     echo '<div style="margin: 20px; color:#444;">';
-    echo 'If things are not done in a minute <a target="_parent" href="' . admin_url('plugin-install.php?s=301%20redirects%20webfactory&tab=search&type=term') . '">install the plugin manually via Plugins page</a><br><br>';
+    echo 'If things are not done in a minute <a target="_parent" href="' . esc_url(admin_url('plugin-install.php?s=301%20redirects%20webfactory&tab=search&type=term')) . '">install the plugin manually via Plugins page</a><br><br>';
     echo 'Starting ...<br><br>';
 
     wp_cache_flush();
@@ -566,11 +566,11 @@ class LoginLockdown_Functions extends LoginLockdown
       if (is_null($activate)) {
         echo 'WP 301 Redirects Activated.<br />';
 
-        echo '<script>setTimeout(function() { top.location = "' . admin_url('options-general.php?page=eps_redirects') . '"; }, 1000);</script>';
-        echo '<br>If you are not redirected in a few seconds - <a href="' . admin_url('options-general.php?page=eps_redirects') . '" target="_parent">click here</a>.';
+        echo '<script>setTimeout(function() { top.location = "' . esc_url(admin_url('options-general.php?page=eps_redirects')) . '"; }, 1000);</script>';
+        echo '<br>If you are not redirected in a few seconds - <a href="' . esc_url(admin_url('options-general.php?page=eps_redirects')) . '" target="_parent">click here</a>.';
       }
     } else {
-      echo 'Could not install WP 301 Redirects. You\'ll have to <a target="_parent" href="' . admin_url('plugin-install.php?s=301%20redirects%20webfactory&tab=search&type=term') . '">download and install manually</a>.';
+      echo 'Could not install WP 301 Redirects. You\'ll have to <a target="_parent" href="' . esc_url(admin_url('plugin-install.php?s=301%20redirects%20webfactory&tab=search&type=term')) . '">download and install manually</a>.';
     }
 
     echo '</div>';

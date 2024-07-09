@@ -460,7 +460,7 @@ class LoginLockdown_Admin extends LoginLockdown
   static function reset_pointers()
   {
     $pointers = array();
-    $pointers['welcome'] = array('target' => '#menu-settings', 'edge' => 'left', 'align' => 'right', 'content' => 'Thank you for installing the <b style="font-weight: 800;">Login Lockdown</b> plugin! Please open <a href="' . admin_url('options-general.php?page=loginlockdown') . '">Settings - Login Lockdown</a> to enhance your site security.');
+    $pointers['welcome'] = array('target' => '#menu-settings', 'edge' => 'left', 'align' => 'right', 'content' => 'Thank you for installing the <b style="font-weight: 800;">Login Lockdown</b> plugin! Please open <a href="' . esc_url(admin_url('options-general.php?page=loginlockdown')) . '">Settings - Login Lockdown</a> to enhance your site security.');
 
     update_option(LOGINLOCKDOWN_POINTERS_KEY, $pointers);
   } // reset_pointers
@@ -473,7 +473,7 @@ class LoginLockdown_Admin extends LoginLockdown
   static function footer_save_button()
   {
     echo '<p class="submit">';
-    echo '<button class="button button-primary button-large">' . __('Save Changes', 'login-lockdown') . ' <i class="loginlockdown-icon loginlockdown-checkmark"></i></button>';
+    echo '<button class="button button-primary button-large">' . esc_html__('Save Changes', 'login-lockdown') . ' <i class="loginlockdown-icon loginlockdown-checkmark"></i></button>';
     echo '</p>';
   } // footer_save_button
 

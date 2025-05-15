@@ -67,7 +67,7 @@ class LoginLockdown_Admin extends LoginLockdown
     }
 
     $pointers = get_option(LOGINLOCKDOWN_POINTERS_KEY);
-    if ($pointers && 'settings_page_loginlockdown' != $hook) {
+    if ($pointers && 'settings_page_loginlockdown' != $hook && current_user_can('manage_options')) {
       $pointers['run_tool_nonce'] = wp_create_nonce('loginlockdown_run_tool');
       wp_enqueue_script('wp-pointer');
       wp_enqueue_style('wp-pointer');
